@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-Face-match',
-  templateUrl: './Face-match.component.html',
-  styleUrls: ['./Face-match.component.css']
+  selector: 'app-face-match',
+  templateUrl: './face-match.component.html',
+  styleUrls: ['./face-match.component.css']
 })
 export class FaceMatchComponent implements OnInit {
 

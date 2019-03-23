@@ -3,21 +3,21 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { FaceMatchComponent } from './Face-match.component';
+import { PhotoUploadComponent } from './photo-upload.component';
 
-describe('FaceMatchComponent', () => {
-  let component: FaceMatchComponent;
-  let fixture: ComponentFixture<FaceMatchComponent>;
+describe('PhotoUploadComponent', () => {
+  let component: PhotoUploadComponent;
+  let fixture: ComponentFixture<PhotoUploadComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ FaceMatchComponent ]
+      declarations: [ PhotoUploadComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FaceMatchComponent);
+    fixture = TestBed.createComponent(PhotoUploadComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
