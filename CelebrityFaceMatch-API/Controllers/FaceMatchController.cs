@@ -22,9 +22,9 @@ namespace CelebrityFaceMatch_API.Controllers
         [HttpPost]
         public async Task<IActionResult> Post([FromForm]RequestDTO request)
         {
-            if(request != null || request.Image.Length  > 0)
+            if(request != null || request.File.Length  > 0)
             {
-                var matches = await _aws.GetMatches(request.Image);
+                var matches = await _aws.GetMatches(request.File);
                 if (matches.CelebrityDetails != null)
                     return Ok(matches);
                 return BadRequest("No celebrity match");

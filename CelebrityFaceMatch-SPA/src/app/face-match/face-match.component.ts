@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { CelebrityDetails } from './../_models/celebrityDetails';
+import { Response } from './../_models/response';
+import { Component, OnInit, Output, ViewChild } from '@angular/core';
+
 
 @Component({
   selector: 'app-face-match',
@@ -6,10 +9,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./face-match.component.css']
 })
 export class FaceMatchComponent implements OnInit {
-
+  awsResponse: Response;
+  celebritydetails: CelebrityDetails[];
   constructor() { }
 
   ngOnInit() {
+  }
+
+  celebrityCheck(response: any) {
+    this.awsResponse = JSON.parse(response);
+    this.celebritydetails = this.awsResponse.celebrityDetails;
+    console.log(this.celebritydetails);
   }
 
 }

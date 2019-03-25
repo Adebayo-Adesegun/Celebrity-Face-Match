@@ -8,6 +8,6 @@ namespace CelebrityFaceMatch_API.Models
 {
     public class RequestDTO
     {
-        public IFormFile Image { get; set; }
+        public IFormFile File { get; set; }
     }
 }
