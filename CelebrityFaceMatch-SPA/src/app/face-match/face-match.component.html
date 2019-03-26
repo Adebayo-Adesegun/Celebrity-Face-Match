@@ -9,72 +9,23 @@
   </div>
 
   <div class="col-md-7 col-xs-7 col-sm-7">
-    <!-- <div class="row">
-        {{awsResponse?.unMatchCount}}
-    </div> -->
-
-      <div class="container mt-3 div-scroll">
+    <div class="container mt-3 div-scroll">
         <div class="media border p-3" *ngFor="let item of celebritydetails" >
           <i class="fa fa-user-circle-o fa-4x mr-3 mt-3 rounded-circle fa-color"></i>
           <div class="media-body">
+            <hr>
             <h4> <small><i> {{item.name}}</i></small></h4>
-            <p><a href="{{item.url}}" target="_blank">Click to view profile </a> </p>
+            <hr>
+            <p><a class="btn btn-outline-danger pull-right" (click)="celebrityProfile(item.url)" >Click to view profile </a> </p>
           </div>
         </div>
-
-        <!-- <div class="media border p-3">
-          <i class="fa fa-user-circle-o fa-4x mr-3 mt-3 rounded-circle fa-color"></i>
-          <div class="media-body">
-            <h4> <small><i> John Doe</i></small></h4>
-            <p><a href="#">Click to view profile </a> </p>
-          </div>
-        </div>
-        <div class="media border p-3">
-          <i class="fa fa-user-circle-o fa-4x mr-3 mt-3 rounded-circle fa-color"></i>
-          <div class="media-body">
-            <h4> <small><i> John Doe</i></small></h4>
-            <p><a href="#">Click to view profile </a> </p>
-          </div>
-        </div>
-        <div class="media border p-3">
-          <i class="fa fa-user-circle-o fa-4x mr-3 mt-3 rounded-circle fa-color"></i>
-          <div class="media-body">
-            <h4> <small><i> John Doe</i></small></h4>
-            <p><a href="#">Click to view profile </a> </p>
-          </div>
-        </div>
-        <div class="media border p-3">
-          <i class="fa fa-user-circle-o fa-4x mr-3 mt-3 rounded-circle fa-color"></i>
-          <div class="media-body">
-            <h4> <small><i> John Doe</i></small></h4>
-            <p><a href="#">Click to view profile </a> </p>
-          </div>
-        </div>
-        <div class="media border p-3">
-          <i class="fa fa-user-circle-o fa-4x mr-3 mt-3 rounded-circle fa-color"></i>
-          <div class="media-body">
-            <h4> <small><i> John Doe</i></small></h4>
-            <p><a href="#">Click to view profile </a> </p>
-          </div>
-        </div>
-        <div class="media border p-3">
-          <i class="fa fa-user-circle-o fa-4x mr-3 mt-3 rounded-circle fa-color"></i>
-          <div class="media-body">
-            <h4> <small><i> John Doe</i></small></h4>
-            <p><a href="#">Click to view profile </a> </p>
-          </div>
-        </div>
-        <div class="media border p-3">
-          <i class="fa fa-user-circle-o fa-4x mr-3 mt-3 rounded-circle fa-color"></i>
-          <div class="media-body">
-            <h4> <small><i> John Doe</i></small></h4>
-            <p><a href="#">Click to view profile </a> </p>
-          </div>
-        </div> -->
-
     </div>
-
   </div>
 
+</div>
 
+<div class="container">
+    <div class="row">
+        {{awsResponse?.unMatchCount}} 0
+    </div>
 </div>

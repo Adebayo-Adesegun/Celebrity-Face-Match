@@ -22,4 +22,9 @@ export class FaceMatchComponent implements OnInit {
     console.log(this.celebritydetails);
   }
 
+  celebrityProfile(link: string) {
+    link = 'https://' + link;
+    window.open(link, '_blank');
+  }
+
 }

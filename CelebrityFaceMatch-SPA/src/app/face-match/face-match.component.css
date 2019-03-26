@@ -10,3 +10,8 @@
 overflow-y: scroll;
 height: 70vh;
 }
+
+.dz-padding {
+  padding-left: 20px;
+  background-color: red;
+}
