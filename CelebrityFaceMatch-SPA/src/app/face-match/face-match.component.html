@@ -1,17 +1,14 @@
-<div class="row mt-5 ml-5">
-
-  <div class="col-md-5 col-xs-5 col-sm-5 shadow-left">
-    <div class="container">
-      <div class="row">
+<div class="row mt-5">
+  <div class="col-md-5  shadow-left">
+      <div class="container">
           <app-photo-upload (responseEmit)="celebrityCheck($event)"></app-photo-upload>
-      </div>
     </div>
   </div>
 
-  <div class="col-md-7 col-xs-7 col-sm-7">
+  <div class="col-md-7" *ngIf="celebritydetails?.length" >
     <div class="container mt-3 div-scroll">
         <div class="media border p-3" *ngFor="let item of celebritydetails" >
-          <i class="fa fa-user-circle-o fa-4x mr-3 mt-3 rounded-circle fa-color"></i>
+          <i class="fa fa-user-circle-o fa-4x mr-3 mt-3 rounded-circle"></i>
           <div class="media-body">
             <hr>
             <h4> <small><i> {{item.name}}</i></small></h4>
@@ -24,8 +21,10 @@
 
 </div>
 
-<div class="container">
+
     <div class="row">
-        {{awsResponse?.unMatchCount}} 0
+        <div class="container">
+        {{awsResponse?.unMatchCount}}
+      </div>
     </div>
-</div>
+
