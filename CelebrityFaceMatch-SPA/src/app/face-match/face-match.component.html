@@ -5,7 +5,7 @@
     </div>
   </div>
 
-  <div class="col-md-7" *ngIf="celebritydetails?.length" >
+  <div class="col-md-6" *ngIf="celebritydetails?.length" [@openClose]="isOpen ? 'open' : 'closed'">
     <div class="container mt-3 div-scroll">
         <div class="media border p-3" *ngFor="let item of celebritydetails" >
           <i class="fa fa-user-circle-o fa-4x mr-3 mt-3 rounded-circle"></i>
@@ -17,6 +17,10 @@
           </div>
         </div>
     </div>
+  </div>
+
+  <div class="col-md-1" *ngIf="celebritydetails?.length">
+      <p class="badge badge-danger p-4"> {{ celebritydetails?.length}} <small>celebrities found in picture</small></p>
   </div>
 
 </div>

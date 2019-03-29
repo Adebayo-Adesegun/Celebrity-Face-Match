@@ -21,7 +21,7 @@
     </div> -->
 
     <!--  -->
-    <div class="col-md-12 mb-5" *ngIf="uploader?.queue?.length">
+    <div class="col-md-12 mb-5" *ngIf="uploader?.queue?.length" >
         <!-- <p>Queue length: {{ uploader?.queue?.length }}</p> -->
         <table class="table" width="100%">
             <thead>
@@ -48,7 +48,7 @@
                     [ngStyle]="{ 'width': uploader.progress + '%' }"></div>
                 </div>
             </div>
-            <button type="button" class="btn btn-success btn-lg pull-right mt-4"
+            <button type="button" class="btn btn-success btn-lg mt-4 pull-left"
                     (click)="uploader.uploadAll()" [disabled]="!uploader.getNotUploadedItems().length">
                 <span class="fa fa-upload"></span> Upload
             </button>
@@ -56,10 +56,10 @@
                     (click)="uploader.cancelAll()" [disabled]="!uploader.isUploading">
                 <span class="glyphicon glyphicon-ban-circle"></span> Cancel all
             </button> -->
-            <!-- <button type="button" class="btn btn-danger btn-s"
+            <button type="button" class="btn btn-danger btn-lg mt-4 pull-right"
                     (click)="uploader.clearQueue()" [disabled]="!uploader.queue.length">
-                <span class="glyphicon glyphicon-trash"></span> Remove all
-            </button> -->
+                <span class="fa fa-trash-o"></span> Remove all
+            </button>
         </div>
 
     </div>

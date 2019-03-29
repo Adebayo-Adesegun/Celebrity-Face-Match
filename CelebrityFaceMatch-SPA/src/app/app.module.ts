@@ -1,5 +1,6 @@
 import { routes } from './../routes';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule, InjectionToken } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -21,6 +22,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
    exports: [RouterModule],
    imports: [
       BrowserModule,
+      BrowserAnimationsModule,
       AppRoutingModule,
       FileUploadModule,
       RouterModule.forRoot(routes)
